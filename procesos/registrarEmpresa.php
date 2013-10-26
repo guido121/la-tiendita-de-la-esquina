@@ -9,14 +9,16 @@ function verificar_ruc($ruc){
 	if(!is_numeric($ruc)){
 		$verificar = false;
 	}
-	if(count($ruc) != 11){
+	if(strlen($ruc) != 11){
 		$verificar = false;
 	}
 	
 	$result = "SELECT FROM empresa WHERE ruc='".$ruc."'";
 	$numero_filas = mysql_num_rows($resultado);
 	
-	if($numero_filas =)
+	if($numero_filas != 0){
+		$verificar = false;
+	}
 	return $verificar;
 }
 
@@ -89,4 +91,6 @@ $flagContactoCorreo=1;//$_POST[""];
 $conn=conectarBD("localhost","marketBD","root","");
 $rpta=operacion("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('".$razonSocial."','".$direccionFiscal."','".$telefono."','".$correo."','".$flagContactoCorreo."','".$ruc."','".$contrasenia."')",$conn);
 mysql_close($conn);
+
+
 ?>
