@@ -13,7 +13,7 @@ function verificar_ruc($ruc){
 		$verificar = false;
 	}
 	
-	$result = "SELECT FROM empresa WHERE ruc='".$ruc."'";
+	$resultado = "SELECT FROM empresa WHERE ruc='".$ruc."'";
 	$numero_filas = mysql_num_rows($resultado);
 	
 	if($numero_filas != 0){
