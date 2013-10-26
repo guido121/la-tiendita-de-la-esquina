@@ -10,7 +10,7 @@
       <link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
       <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
       <script src="js/bootstrap.js" type="text/javascript"></script>
-      <script src="js/script1.js" type="text/javascript"></script>
+      <script src="js/scriptBase.js" type="text/javascript"></script>
    </header>
    <body>
       <div id="contenedor" class="">
@@ -25,18 +25,7 @@
                //include('pags/registroB.php');
                ?>
          </div>
-         <!--<div id="tab-menu">
-            <div id="tab-lista">
-            	<ul>
-            		<li class="selected"><a href="">Mas comprados</a></li>
-            		<li><a href="">Nuevos productos</a></li>
-            		<li><a href="">Marcas presentes</a></li>
-            	</ul>
-            </div>
-            <div id="contenido-tab">
-            	<p>Los productos mas comprados son:</p>
-            </div>
-            </div>-->
+       
       </div>
       <div class="clearfix"></div>
       <?php include('.\include\pie_de_pagina.php') ?>

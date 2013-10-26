@@ -48,5 +48,11 @@ $('document').ready(function(){
 	//cForm-regist-next-welcome
 	//cForm-regist-next-usuario
 	//cForm-regist-next-contacto
-
+	
+	$('#myTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	})
+	
+	
 });
