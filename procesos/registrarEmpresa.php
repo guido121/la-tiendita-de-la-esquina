@@ -1,9 +1,10 @@
 <?php
-include('conexionBD.php');
-
+//include('conexionBD.php');
+	include "config.php";
+	include "funciones.php";
 function verificar_ruc($ruc){
 	$verificar = true;
-	if($ruc == ""){
+	if(!isset($ruc)){
 		$verificar = false;
 	}
 	if(!is_numeric($ruc)){
@@ -13,10 +14,15 @@ function verificar_ruc($ruc){
 		$verificar = false;
 	}
 	
-	$resultado = "SELECT * FROM empresa WHERE ruc='".$ruc."'";
+<<<<<<< HEAD
+	$result = "SELECT FROM empresa WHERE ruc='".$ruc."'";
+	$numero_filas = consulta_bd($resultado);
+=======
+	$resultado = "SELECT FROM empresa WHERE ruc='".$ruc."'";
 	$numero_filas = mysql_num_rows($resultado);
+>>>>>>> 16e78a08f45190c64e5e7b804218eae4dcaac472
 	
-	if($numero_filas != 0){
+	if(count($numero_filas) != 0){
 		$verificar = false;
 	}
 	return $verificar;
@@ -24,7 +30,7 @@ function verificar_ruc($ruc){
 
 function verificar_contrasenia($contrasenia1,$contrasenia2,$ruc){
 	$verificar = true;
-	if($contrasenia1 == ""){
+	if($contrasenia==""){
 		$verificar = false;
 	}
 	if(count($contrasenia1) <= 6){
@@ -41,7 +47,7 @@ function verificar_contrasenia($contrasenia1,$contrasenia2,$ruc){
 
 function verificar_razonsocial($razonsocial){
 	$verificar = true;
-	if($razonsocial == ""){
+	if($razonsocial=="")){
 		$verificar = false;
 	}
 	return $verificar;
@@ -49,14 +55,13 @@ function verificar_razonsocial($razonsocial){
 
 function verificar_telefono($telefono){
 	$verificar = true;
-	if($telefono == ""){
+	if($telefono==""){
 		$verificar = false;
 	}
 	if(!is_numeric($telefono)){
 		$verificar = false;
 	}
 	return $verificar;
-	//
 }
 
 //se guardan los datos POST en variables que luego van a ser ingresadas en la bd
@@ -64,7 +69,7 @@ if(verificar_ruc($_POST['ruc'])){
 	$ruc = $_POST['ruc'];
 }
 if(verificar_contrasenia($_POST['contrasenia1'],$_POST['contrasenia2'],$_POST['ruc'])){
-	$contrasenia = $_POST['contrasenia1'];
+	$contrasenia = $_POST['contrasenia'];
 }
 if(verificar_razonsocial($_POST['razonSoc'])){
 	$razonSocial = $_POST['razonSoc'];
@@ -90,9 +95,8 @@ $correo = (isset($_POST['correo'])) ? $_POST['correo'];*/
 $flagContactoCorreo=1;//$_POST[""];
 
 $conn=conectarBD("localhost","marketBD","root","");
-$rpta=operacion("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('".$razonSocial."','".$direccionFiscal."','".$telefono."','".$correo."','".$flagContactoCorreo."','".$ruc."','".$contrasenia."')",$conn);
+$rpta=operacion("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('".$razonSocial."','".$direccionFiscal."','".$telefono."','".$correo."','".$flagContactoCorreo."','".$ruc."','".$contrasenia."')");
 mysql_close($conn);
 
-header('Location: index.php');
 
 ?>
