@@ -5,7 +5,8 @@
          .:: La tiendita de la esquina ::.
       </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
+	  <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
+	  <link href="css/estiloExtra.css" type="text/css" rel="stylesheet"/>
       <link href="css/bootstrap.css" type="text/css" rel="stylesheet"/>
       <link href="css/bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
       <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
