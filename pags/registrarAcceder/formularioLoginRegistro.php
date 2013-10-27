@@ -17,9 +17,9 @@
 				</div>
 				<div class="clear"></div>
 				<div class="label-input">
-					<input class="radiosAcceder" div-target="" button-type="submit"  action-form="procesos/validarUsuario.php" type="radio" name="estadoUsuario" value="Registrado" />
+					<input class="radiosAcceder" div-target="" button-type="submit"  action-form="procesos/autenticar.php" type="radio" name="estadoUsuario" value="Registrado" />
 					<label >Si, y es:</label>
-					<input type="text" name="clave"/>
+					<input type="text" name="claveAcceso"/>
 				</div>
 				<div class="clear"></div>
 				<div class="label-input">

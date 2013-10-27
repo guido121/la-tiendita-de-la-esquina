@@ -1,6 +1,7 @@
 <?php
-include('conexionBD.php');
-
+//include('conexionBD.php');
+	include "config.php";
+	include "funciones.php";
 function verificar_ruc($ruc){
 	$verificar = true;
 	if(!isset($ruc)){
@@ -14,9 +15,9 @@ function verificar_ruc($ruc){
 	}
 	
 	$result = "SELECT FROM empresa WHERE ruc='".$ruc."'";
-	$numero_filas = mysql_num_rows($resultado);
+	$numero_filas = consulta_bd($resultado);
 	
-	if($numero_filas != 0){
+	if(count($numero_filas) != 0){
 		$verificar = false;
 	}
 	return $verificar;
@@ -24,7 +25,7 @@ function verificar_ruc($ruc){
 
 function verificar_contrasenia($contrasenia1,$contrasenia2,$ruc){
 	$verificar = true;
-	if(!isset($contrasenia1)){
+	if($contrasenia==""){
 		$verificar = false;
 	}
 	if(count($contrasenia1) <= 6){
@@ -41,7 +42,7 @@ function verificar_contrasenia($contrasenia1,$contrasenia2,$ruc){
 
 function verificar_razonsocial($razonsocial){
 	$verificar = true;
-	if(!isset($razonsocial)){
+	if($razonsocial=="")){
 		$verificar = false;
 	}
 	return $verificar;
@@ -49,7 +50,7 @@ function verificar_razonsocial($razonsocial){
 
 function verificar_telefono($telefono){
 	$verificar = true;
-	if(!isset($telefono)){
+	if($telefono==""){
 		$verificar = false;
 	}
 	if(!is_numeric($telefono)){
@@ -89,7 +90,7 @@ $correo = (isset($_POST['correo'])) ? $_POST['correo'];*/
 $flagContactoCorreo=1;//$_POST[""];
 
 $conn=conectarBD("localhost","marketBD","root","");
-$rpta=operacion("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('".$razonSocial."','".$direccionFiscal."','".$telefono."','".$correo."','".$flagContactoCorreo."','".$ruc."','".$contrasenia."')",$conn);
+$rpta=operacion("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('".$razonSocial."','".$direccionFiscal."','".$telefono."','".$correo."','".$flagContactoCorreo."','".$ruc."','".$contrasenia."')");
 mysql_close($conn);
 
 
