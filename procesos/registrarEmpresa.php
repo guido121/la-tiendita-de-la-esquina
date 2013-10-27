@@ -14,8 +14,13 @@ function verificar_ruc($ruc){
 		$verificar = false;
 	}
 	
+<<<<<<< HEAD
 	$result = "SELECT FROM empresa WHERE ruc='".$ruc."'";
 	$numero_filas = consulta_bd($resultado);
+=======
+	$resultado = "SELECT FROM empresa WHERE ruc='".$ruc."'";
+	$numero_filas = mysql_num_rows($resultado);
+>>>>>>> 16e78a08f45190c64e5e7b804218eae4dcaac472
 	
 	if(count($numero_filas) != 0){
 		$verificar = false;
