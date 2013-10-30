@@ -82,11 +82,15 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 	border: 1px solid black;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of d40f844... css
 .logo > img{
 margin-bottom:0px;
 margin-top:0px;
 width:160px;
 }
+<<<<<<< HEAD
 #welcomeUsername{
 margin-top:10px;
 font-family: sans-serif;
@@ -99,6 +103,12 @@ font-weight:normal;
 }
 =======
 >>>>>>> d40f8448f679ced8f81ee507476994be9c50cfd5
+=======
+.welcomeUsername{
+font-weight:bold;
+font-size:18px;
+}
+>>>>>>> parent of d40f844... css
 /* .alinearIzquierda{
 float:left;
 } */
@@ -553,7 +563,6 @@ background-color: #dff0d8;
 	margin-left: 40px;
 	margin-bottom: 40px;
 	padding:20px;	
-	width:110px;
 }
 #listaAbarrotes a{
 	text-decoration: none;
@@ -564,22 +573,22 @@ background-color: #dff0d8;
 }
 
 #cuerpoAbarrotes{
-	/*border: 1px solid black;*/
+	border: 1px solid black;
 	background-color: white;
 	height: 340px;
 	float: right;
-	width:730px;
+	width:750px;
 	margin-right: 20px;
 	margin-top:40px;	
 }
 
 #mas_vendidos_abarrotes{
+	width:320px;
 	height:200px;
-	
+	float:left;
 	margin-left: 40px;
 	margin-top:40px;
 	color: black;
-	background-image:('url: img/arroz.jpeg');
 }
 #cuerpoAbarrotes h2{
 	margin-left:20px;
@@ -592,21 +601,11 @@ background-color: #dff0d8;
 	margin:10px;
 }
 
-.img_abarrotes img{
-	width:120px;
-	height:100px;
-}
-
-#img1{
-	border : none;
-
-}
-
 #abarrotes_ofertas{
 	width:320px;
 	height:200px;
 	float:right;
-	margin-left: 10px;
+	margin-left: 20px;
 	margin-right: 40px;
 	margin-top:40px;
 	color: black;

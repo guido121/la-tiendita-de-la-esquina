@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 30-10-2013 a las 04:16:13
+-- Tiempo de generación: 30-10-2013 a las 04:41:55
 -- Versión del servidor: 5.6.12-log
 -- Versión de PHP: 5.4.12
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `marketbd`
 --
-CREATE DATABASE IF NOT EXISTS `marketbd` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `marketbd`;
 
 -- --------------------------------------------------------
 

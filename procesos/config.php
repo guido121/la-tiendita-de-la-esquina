@@ -1,8 +1,16 @@
 <?php 
 $config = array();
-$config['servidor']="localhost";//'mysql.nixiweb.com';
-$config['base_datos']="marketbd";//'u572712140_ltdle';
-$config['usuario']="root";//'u572712140_root';
-$config['password']="";//'adminadmin';
+$config['servidor']='mysql9.000webhost.com';
+$config['base_datos']="a9768316_ltdle";
+$config['usuario']="a9768316_root";
+$config['password']="titan121";
+/*
+000WEBHOSTING
+---------------------
+servidor:mysql9.000webhost.com
+base de datos:a9768316_ltdle
+usuario:a9768316_root
+password:titan121
 
+*/
 ?>
