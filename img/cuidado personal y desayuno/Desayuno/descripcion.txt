@@ -1,0 +1,9 @@
+avena_santacatalina_quinua: 4.70 Qinua y Avena santa catalina 380gr
+avena-santa-catalina-bolsa-380-gr :3.20 Avena santa catalina 380gr
+quaker_tradicional : 4.30 Avena quaker tradicional 400gr
+soya_avena_santacatalina: 4.70 Soya y Avena santa catalina 380gr
+
+gloria_fresa: 6.00 Yogurt Gloria Sabor a Fresa 1Lt 
+yogurt_gloria_actibio: 6.60 Yogurt Gloria Actibio fresa 1Lt 
+yogurt_gloria_light: 6.05 Yogurt Light Gloria Fresa 1Lt 
+yogurt_gloria_vitacol: 6.99 Yogurt Gloria Vitacol Fresa 1Lt 
