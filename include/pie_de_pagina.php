@@ -34,7 +34,7 @@
          <div class="mapa-nav-cont">
             <h2>Registrar/Acceder</h2>
             <ul>
-               <li><a href="index.php?pag=loginRegist" >Log in </a></li>
+               <li><a href="index.php?pag=acceder" >Log in </a></li>
             </ul>
          </div>
          <div class="mapa-nav-cont">

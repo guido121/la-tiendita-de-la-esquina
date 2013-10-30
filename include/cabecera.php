@@ -16,11 +16,11 @@
 				<li><a href="procesos/cerrarSesion.php" class=""><i class ="icon-off pull-left" style="padding-right: 3px;"></i>Salir</a></li>
 				
 			 <?php }else{?>
-				<li><a href="index.php?pag=loginRegist" class=""><i class ="icon-pencil pull-left" style="padding-right: 3px;"></i>Registrarse/Acceder</a></li>
+				<li><a href="index.php?pag=acceder" class=""><i class ="icon-pencil pull-left" style="padding-right: 3px;"></i>Registrarse/Acceder</a></li>
 			 <?php 
 			 }
 			}else{ ?>
-				<li><a href="index.php?pag=loginRegist" class=""><i class ="icon-pencil pull-left" style="padding-right: 3px;"></i>Registrarse/Acceder</a></li>
+				<li><a href="index.php?pag=acceder" class=""><i class ="icon-pencil pull-left" style="padding-right: 3px;"></i>Registrarse/Acceder</a></li>
 			<?php
 			}			
 			 ?>
@@ -32,9 +32,9 @@
 		 <div id="datoUsuario" class="pull-left">
 		 <?php if(isset($_SESSION["autenticado"])){
 		 if($_SESSION["autenticado"]==true){?>
-		 <p class="welcomeUsername">Bienvenido,
+		 <p id="welcomeUsername">Bienvenido,<span id="username">
 		<?php echo $_SESSION["razonSocial"];?>
-			<p/>
+			</span><p/>
 		<?php }
 		} ?>
 		 </div>		 

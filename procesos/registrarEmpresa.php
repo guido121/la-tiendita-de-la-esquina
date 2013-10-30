@@ -1,102 +1,77 @@
 <?php
+session_start();
 //include('conexionBD.php');
 	include "config.php";
 	include "funciones.php";
-function verificar_ruc($ruc){
-	$verificar = true;
-	if(!isset($ruc)){
-		$verificar = false;
-	}
-	if(!is_numeric($ruc)){
-		$verificar = false;
-	}
-	if(strlen($ruc) != 11){
-		$verificar = false;
-	}
+
+if(isset($_POST['contrasenia1']) && isset($_POST['contrasenia2']) && isset($_POST['razonSoc']) && isset($_POST['ruc']) && isset($_POST['dirFiscal']) && isset($_POST['correo']) && isset($_POST['telefono'])){
+	$contrasenia1=$_POST['contrasenia1'];
+	$contrasenia2=$_POST['contrasenia2'];
+	$razonSocial=$_POST['razonSoc'];
+	$ruc=$_POST['ruc'];
+	$dirFiscal=$_POST['dirFiscal'];
+	$correo=$_POST['correo']; 
+	$telefono=$_POST['telefono'];
+	$flagContactoCorreo=1;
+	$verificar=true;
+	$mensaje="";
+		if(!is_numeric($ruc)){
+			$verificar = false;
+			$mensaje.=' -El ruc debe de ser num&eacute;rico';
+		}
+		if(strlen($ruc) != 11){
+			$verificar = false;
+			$mensaje.='<br/> -La longitud del ruc debe de ser de 11 digitos.';
+		}
+	//CONTRASENIA 1 y 2	
+		if($contrasenia1 != $contrasenia2){
+			$verificar = false;
+			$mensaje.='<br/> -Las contrase&ntilde;as no coinciden.';
+		}
+		if($contrasenia1==""){
+			$verificar = false;
+			$mensaje.='<br/> -La primera contrase&ntilde;a no puede estar vac&iacute;a.';
+		}
+		if($contrasenia2==""){
+			$verificar = false;
+			$mensaje.='<br/> -La segunda contrase&ntilde;a no puede estar vac&iacute;a.';
+		}		
+		if(strlen($contrasenia1) <= 6){
+			$verificar = false;
+			$mensaje.='<br/> -La longitud m&iacute;nima de la contrase&ntilde;a es de 6.';
+		}
+		if($contrasenia1 == $ruc){
+			$verificar = false;
+			$mensaje.='<br/> -El nro de RUC no puede ser la contra&ntilde;a.';
+		}
 	
-<<<<<<< HEAD
-	$result = "SELECT FROM empresa WHERE ruc='".$ruc."'";
-	$numero_filas = consulta_bd($resultado);
-=======
-	$resultado = "SELECT FROM empresa WHERE ruc='".$ruc."'";
-	$numero_filas = mysql_num_rows($resultado);
->>>>>>> 16e78a08f45190c64e5e7b804218eae4dcaac472
+		//RAZON SOCIAL
+		if($razonSocial==""){
+			$verificar = false;
+			$mensaje.='<br/> -El ruc no puede estar vac&iacite;o.';
+		}
+		//TELEFONO
+		if($telefono==""){
+			$verificar = false;
+			$mensaje.='<br/> -El n&uacute;mero de tel&eacute;fono no puede estar vac&iacite;o.';
+		}
+		if(!is_numeric($telefono)){
+			$verificar = false;
+			$mensaje.='<br/> -El tel&eacute;fono debe de ser num&eacute;rico.';
+		}
+		if($verificar==true){
+			$contrasenia1=md5($contrasenia1);
+			consulta_bd_sin_resultados("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('$razonSocial','$dirFiscal',$telefono,'$correo','$flagContactoCorreo',$ruc,'$contrasenia1')",$config);
+			//mysql_close($conn);
+			$mensaje="Se ha registrado satisfactoriamente";
 	
-	if(count($numero_filas) != 0){
-		$verificar = false;
-	}
-	return $verificar;
+		}
+			$_SESSION["feedBackRegistro"]=$mensaje;
+		
 }
-
-function verificar_contrasenia($contrasenia1,$contrasenia2,$ruc){
-	$verificar = true;
-	if($contrasenia==""){
-		$verificar = false;
-	}
-	if(count($contrasenia1) <= 6){
-		$verificar = false;
-	}
-	if($contrasenia1 == $ruc){
-		$verificar = false;
-	}
-	if($contrasenia1 != $contrasenia2){
-		$verificar = false;
-	}
-	return $verificar;
-}
-
-function verificar_razonsocial($razonsocial){
-	$verificar = true;
-	if($razonsocial=="")){
-		$verificar = false;
-	}
-	return $verificar;
-}
-
-function verificar_telefono($telefono){
-	$verificar = true;
-	if($telefono==""){
-		$verificar = false;
-	}
-	if(!is_numeric($telefono)){
-		$verificar = false;
-	}
-	return $verificar;
-}
-
-//se guardan los datos POST en variables que luego van a ser ingresadas en la bd
-if(verificar_ruc($_POST['ruc'])){
-	$ruc = $_POST['ruc'];
-}
-if(verificar_contrasenia($_POST['contrasenia1'],$_POST['contrasenia2'],$_POST['ruc'])){
-	$contrasenia = $_POST['contrasenia'];
-}
-if(verificar_razonsocial($_POST['razonSoc'])){
-	$razonSocial = $_POST['razonSoc'];
-}
-if(isset($_POST['dirFiscal'])){
-	$direccionFiscal = $_POST['dirFiscal'];
-}
-if(verificar_telefono($_POST['telefono'])){
-	$telefono = $_POST['telefono'];
-}
-if(isset($_POST['correo'])){
-	$correo = $_POST['correo'];
-}
-
-/*
-$ruc = (verificar_ruc($_POST['ruc']))? $_POST['ruc'];
-$contrasenia = (verificar_contrasenia($_POST['contrasenia1'],$_POST['contrasenia2'],$_POST['ruc'])) ? $_POST['contrasenia'];
-$razonSocial=(verificar_razonsocial($_POST['razonSoc'])) ? $_POST['razonSoc'];
-$direccionFiscal= (isset($_POST['dirFiscal'])) ? $_POST['dirFiscal'];
-$telefono=(verificar_telefono($_POST['telefono'])) ? $_POST['telefono'];
-$correo = (isset($_POST['correo'])) ? $_POST['correo'];*/
-
-$flagContactoCorreo=1;//$_POST[""];
-
-$conn=conectarBD("localhost","marketBD","root","");
-$rpta=operacion("INSERT INTO empresa(razonSocial,direccionFiscal,telefono,correo,flagContactoCorreo,ruc,contrasenia) VALUES('".$razonSocial."','".$direccionFiscal."','".$telefono."','".$correo."','".$flagContactoCorreo."','".$ruc."','".$contrasenia."')");
-mysql_close($conn);
+	//Se realizara redireccion cuando se accese por otro medio, ya que el formulario de registro siempre envía todos los parámetro a pesar de estar vacíos
+	header("Location:../index.php?pag=registrate");
 
 
 ?>
+		

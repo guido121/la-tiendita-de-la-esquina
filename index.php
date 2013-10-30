@@ -16,21 +16,21 @@
    </header>
    <body>
       <div id="contenedor" class="">
-         <?php include('.\include\cabecera.php');?>
+         <?php include("include/cabecera.php");?>
          <div class="clearfix"></div>
-         <?php include('.\include\barra_categorias_productos.php') ?>
+         <?php include("include/barra_categorias_productos.php") ?>
          <div class="clearfix"></div>
          <div id="cuerpo">
             <!--Código Lucho */-->
             <?php
-               include('procesos/validarContenido.php');
+               include("procesos/validarContenido.php");
                //include('pags/registroB.php');
                ?>
          </div>
        
       </div>
       <div class="clearfix"></div>
-      <?php include('.\include\pie_de_pagina.php') ?>
+      <?php include("include/pie_de_pagina.php") ?>
       </div>
    </body>
 </html>

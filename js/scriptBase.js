@@ -1,4 +1,8 @@
 $('document').ready(function(){
+//INICIAL ELEMENTOS NO VISIBLES
+$(".form-error-msg").hide();
+$("#msgVerifiqueCampos").hide();
+
 	$('.nav-tabs > li').click(function(){
 		$('.nav-tabs > li').removeClass('active');
 		$(this).addClass('active');
@@ -52,7 +56,24 @@ $('document').ready(function(){
 	$('#myTab a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
-	})
-	
-	
+	});
+	$('#btnIniciarSesion').click(function(e){
+	$(".form-error-msg").hide();
+	$("#msgVerifiqueCampos").hide();
+	var ok=true;
+	var ruc=$("#txtRUCAcceder").val();
+	var contrasenia=$("#txtContraseniaAcceder").val();
+	if(ruc==""){
+		$("#errorRUC").show();
+		ok=false;
+	}
+		if(contrasenia==""){
+		$("#errorContrasenia").show();
+		ok=false;
+	}
+	if(ok==false){
+		$("#msgVerifiqueCampos").show();
+		e.preventDefault();
+	}
+	});
 });

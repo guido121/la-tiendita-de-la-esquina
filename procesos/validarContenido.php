@@ -7,7 +7,10 @@
 					$address = 'pags/registroA.php';
 				break;
 			
-				case 'loginRegist': //Registrarse/Acceder
+				case 'registrate': //Registrarse
+					$address='pags/registrarAcceder/registrate.php';
+				break;
+				case 'acceder': //Acceder
 					$address='pags/registrarAcceder/formularioLoginRegistro.php';
 				break;
 				case 'car':   //Carrito

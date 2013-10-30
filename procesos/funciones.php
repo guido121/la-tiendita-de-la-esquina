@@ -46,7 +46,7 @@ function consulta_bd_fetchByIndex($consulta,$config){
 		mysql_free_result($resultado);
 		return $datos;
 }
-function  consulta_bd_sin_resultados($consulta){
+function  consulta_bd_sin_resultados($consulta,$config){
 		$conexion=mysql_connect($config['servidor'],
 		$config['usuario'],
 		$config['password']);
@@ -58,9 +58,5 @@ function  consulta_bd_sin_resultados($consulta){
 			die('No se pudo establecer una conexion a la base de datos: ' . mysql_error());
 		}
 		$resultado=mysql_query($consulta);
-		if(!$resultado){
-			die('No se pudo ejecutar la consulta: ' . mysql_error());
-		}
-		mysql_free_result($resultado);
 	}
 ?>

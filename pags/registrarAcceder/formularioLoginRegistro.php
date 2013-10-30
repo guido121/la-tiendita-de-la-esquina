@@ -1,14 +1,35 @@
-<div id="cForm-Acceder">
-	<form id="form-acceder-registro" action="procesos/registrarEmpresa.php" method="post">
-		<div id="cForm-Inicio">
-			<h1 class="title-pags">&iexcl;Bienvenidos!</h1>
+﻿<div class="cForm-Acceder">
+	<div id="cForm-acceder-center">
+	<h1 class="title-form">&iexcl;Bienvenidos!</h1>
+	<form  id="form-login-registro" action="procesos/autenticar.php" method="post">
 			
+		<div>	
+			<label>R.U.C </label>
+			<input id="txtRUCAcceder" maxlength="11" class="pull-left" type="text" name="rucLogin"/><div id="errorRUC" class="form-error-msg pull-left">(*)</div>
+			<div class="clear"></div>
+			<label>Contraseña </label> 
+			<input id="txtContraseniaAcceder" class="pull-left" type="password" name="claveAcceso" /><div id="errorContrasenia" class="form-error-msg pull-left">(*)</div>
+			<div class="clear"></div>
+		</div>
+		
+		<p>Si no tienes cuenta <a href="index.php?pag=registrate">Regístrate</a></p>
+		
+		<input id="btnIniciarSesion" class="btn btn-info" type="submit" value="Ingresar" />
+		<p id="msgVerifiqueCampos" class="errorFailedLoginMsg datos-no-validos-acceder">(*) Los datos no estan completos.</p>
+		
+		<?php if(isset($_SESSION["autenticado"])){ 
+			if($_SESSION["autenticado"]==false){	?>
+		<p class="datos-no-validos-acceder errorFailedLoginMsg">El usuario y/o la contrase&ntilde;a no es(son) v&aacute;lido(s).</p>
 			
-				<p class="preguntaLogin">&iquest;Cu&aacute;l es su R.U.C.?</p>
-				<div class="label-input">	
-					<label class="etiqueta">Mi R.U.C. es</label>
-					<input type="text" name="ruc"/>
-				</div>
+		<?php 
+		unset($_SESSION["autenticado"]);
+		} 
+		}?>
+	</form>
+	</div>
+</div>
+				
+<!--
 				<div class="clear"></div>
 				<p class="preguntaLogin">&iquest;Tiene clave de acceso para "La tiendita de la Esquina"?</p>
 				<div class="label-input">
@@ -17,9 +38,9 @@
 				</div>
 				<div class="clear"></div>
 				<div class="label-input">
-					<input class="radiosAcceder" div-target="" button-type="submit"  action-form="procesos/autenticar.php" type="radio" name="estadoUsuario" value="Registrado" />
+					<input class="radiosAcceder" div-target="" button-type="submit"  action-form="procesos/validarUsuario.php" type="radio" name="estadoUsuario" value="Registrado" />
 					<label >Si, y es:</label>
-					<input type="text" name="claveAcceso"/>
+					<input type="text" name="clave"/>
 				</div>
 				<div class="clear"></div>
 				<div class="label-input">
@@ -31,7 +52,7 @@
 					<input id="cForm-regist-next-welcome" class="btn-info" type="button" div-target="#cForm-registro1" value="Continuar"/>
 				</div>
 		</div>
-		<div id="cForm-registro1">
+<div id="registrate">
 			<h1 class="title-pags">Bienvenido al registro de usuario</h1>
 			<p>Por favor ingrese los datos indicados a continuación.</p>
 
@@ -64,6 +85,7 @@
 				<input id="cForm-regist-next-usuario" class="btn-info" type="button" div-target="#cForm-registro2" value="Siguiente"/>
 			</div>
 		</div>
+		
 		<div id="cForm-registro2">
 			<h1 class="title-pags">Antes de empezar a comprar</h1>
 				<div class="cForm-registro-textBoxCenter">
@@ -86,5 +108,4 @@
 					<input id="cForm-regist-next-contacto" class="btn-info" type="submit" div-target="#cForm-Inicio" value="Listo"/>
 				</div>
 		</div>
-	</form>
-</div>
+-->
