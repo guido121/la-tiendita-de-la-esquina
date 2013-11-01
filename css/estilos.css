@@ -81,34 +81,28 @@ text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 	height:100%; */
 	border: 1px solid black;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of d40f844... css
+
 .logo > img{
 margin-bottom:0px;
 margin-top:0px;
 width:160px;
 }
-<<<<<<< HEAD
-#welcomeUsername{
+
+/*#welcomeUsername{
 margin-top:10px;
 font-family: sans-serif;
  font-size: 180%;
  font-weight:bold;
-}
+}*/
 #username{
  font-style: oblique;
 font-weight:normal; 
 }
-=======
->>>>>>> d40f8448f679ced8f81ee507476994be9c50cfd5
-=======
+
 .welcomeUsername{
 font-weight:bold;
 font-size:18px;
 }
->>>>>>> parent of d40f844... css
 /* .alinearIzquierda{
 float:left;
 } */
@@ -609,6 +603,28 @@ background-color: #dff0d8;
 	margin-right: 40px;
 	margin-top:40px;
 	color: black;
+}
+/*----PRODUCTOS-----*/
+.item-producto-img{
+position: relative;
+height:150px;
+border:1px solid orange;
+}
+.item-producto-descripcion{
+
+}
+.producto-catalogo{
+width:160px;
+border:1px solid black;
+position:absolute;
+bottom:0px;
+}
+.cProducto-catalogo{
+margin:5px 12px;
+width:190px;
+height:250px;
+float:left;
+border:1px solid red;
 }
 /*---Pie de pagina---*/
 .mapa-nav-cont h1{
