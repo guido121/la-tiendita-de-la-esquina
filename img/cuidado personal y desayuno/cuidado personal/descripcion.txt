@@ -1,0 +1,33 @@
+Cabello
+
+	elvive-full-restore-5-shampoo.jpg: 18.40 Shammpoo Elvive Reconstruccion Total 400ml
+	Elvive-Reparacion-Total-5-Acondicionador-Reparador.jpg: 18.40 Acondicionador Elvive Reconstruccion Total 400ml
+	pantene_restauracion_shampoo.jpg: 12.90 , Shammpoo Pantene Restauracion 400ml
+	pantene_restauracion_acondicionador.jpg:  12.90 , Acondicionador Pantene Restauracion 400ml
+	sedal_colorvital_acondicionador.jpg: 8.99 ,Shammpoo Sedal Color vital400ml
+	sedal_colorvital_shampoo.jpg: 8.99 ,Acondicionador Sedal Color vital 400ml
+	sedal_crematratamiento_colorvital.jpg: 14.20 ,Color vital crema tratamiento pote 400g
+
+Aseo 
+	jabon:
+	
+	palmolive_exfoliaciondiaria: 2.75 Exfoliacion Diaria 130gr
+	palmolive_suavidadexfoliante: 2.75 Suavidad Exfoliante 130gr
+	palmolive_tonoperfecto: 2.75 Tono Perfecto 130gr
+	henodepravia_original: 5.40 Original 150gr
+	henodepravia_hidratante: 5.40 Hidratante 150gr
+	henodepravia_antibacterial:5.40 Antibacterial 150gr
+	dove_cremoso: 3.10 blanco 90gr
+	
+	toallas higienicas:
+	
+	always_nocturno: 5.50 Malla Seca con Flexi Alas Nocturna , 8 unidades
+	always_normal: 3.90 Malla Seca con Flexi Alas Normal , 8 unidades
+	always_ultrafina: 5.50 Malla Seca con Flexi Alas Ultrafina , 8 unidades
+	kotex_nocturna : 6.70 Evolution Dual Nocturna , 8 unidades
+	kotex_normal: 3.99 Evolution Dual Normal , 8 unidades
+	kotex_ultrafina: 3.99 Evolution Dual Ultrafina . 8 unidades
+	nosotras_buenasnoches: 6.99 Buenas Noches Natural , 8 unidades
+	nosotras_invisiblerapigel: 5.35 Invisible Rapigel ,10 unidades
+	nosotras_normal_rapigel:  4.45 Normal Rapisec,20 unidades
+	
