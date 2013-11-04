@@ -197,7 +197,9 @@ CREATE TABLE IF NOT EXISTS `ventadetalle` (
 -- Filtros para la tabla `oferta`
 --
 ALTER TABLE `oferta`
-  ADD CONSTRAINT `fk_producto_oferta` FOREIGN KEY (`codigoProducto`) REFERENCES `producto` (`codigoProducto`);
+ADD CONSTRAINT `fk_producto_oferta` 
+FOREIGN KEY (`codigoProducto`) 
+REFERENCES `producto` (`codigoProducto`);
 
 --
 -- Filtros para la tabla `preguntafrecuente`
