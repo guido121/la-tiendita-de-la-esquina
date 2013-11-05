@@ -1,4 +1,11 @@
-	<div>
+<?php
+ include ('pags/abarrotes/catalogo.php'); 
+?> 
+
+
+
+<!--
+<div>
 		<div id="listaAbarrotes">
 			<li><a href="#">Aceite de Oliva</a></li>
 			<li><a href="#">Aceite Vegetal</a></li>
@@ -15,8 +22,10 @@
 					
 		</div>
 				<div id="cuerpoAbarrotes">
-				<?php
-				include ('pags/abarrotes/lineasProdAbarrotes/productosAbarrotes.php'); // obtiene div de pag/Categoria: "producto"+"lineaProducto.php"
-				?>
+				 // <?php
+				// include ('pags/abarrotes/lineasProdAbarrotes/productosAbarrotes.php'); // obtiene div de pag/Categoria: "producto"+"lineaProducto.php"
+				// ?> 
 				</div>
 	</div>
+	
+	-->

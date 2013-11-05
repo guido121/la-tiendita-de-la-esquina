@@ -641,3 +641,80 @@ margin-top:5px;
 margin-left:23px;
 padding:2px 4px;
 }
+
+/*Catalogo*/
+#subcategorias{
+	background-color: rgba(74, 153, 195, 0.9);
+	-webkit-border-radius: 0px 12px 12px 0px;
+       -moz-border-radius: 0px 12px 12px 0px;
+            border-radius: 0px 12px 12px 0px;
+	width:100px;
+	height:208px;
+	padding:8px;
+	margin-left:30px;
+	float:left;
+	margin-top:40px;	
+	box-shadow: -11px 10px 7px -7px black;
+}
+
+#subcategorias li{
+	background-color:#365f73;
+	border:1px solid black;
+	-webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+	box-shadow: 0px 10px 7px -7px black;
+	margin-top:10px;
+	width:70px;
+	list-style:none;
+	padding-left:10px;
+	margin-left:-40px;
+}
+
+#subcategorias a{
+	text-decoration:none;
+	color:white;
+}
+
+#paginasCatalogo{
+	width:600px;
+	height:288px;
+	padding:7px;
+	background-color:rgba(187, 192, 180, 0.4);
+	-webkit-border-radius: 0px 32px 32px 0px;
+       -moz-border-radius: 0px 32px 32px 0px;
+            border-radius: 0px 32px 32px 0px;
+	float:left;	
+	box-shadow: 10px 10px 7px -7px black;
+	margin-left:-50px;
+}
+
+#catalogo{
+	margin-top:30px;
+	width:745px;
+}
+
+#img img{
+	width:80px;
+	height:100px;
+	
+}
+#boton_carrito{
+	width:80px;
+}
+
+#imagenes{
+	float:left;
+	margin:20px;
+	margin-left: 30px;
+}
+
+#imagenes label{
+	margin-top:10px;
+	text-align:center;
+}
+
+#contenedor_imagenes{
+	width:550px;
+	margin-left:40px;
+}
