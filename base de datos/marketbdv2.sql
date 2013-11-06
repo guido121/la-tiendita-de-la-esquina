@@ -1,4 +1,4 @@
-
+use marketdb;
 CREATE TABLE bloqueado
 ( 
 	bloqueadoId          bigint(20) NOT NULL AUTO_INCREMENT,
