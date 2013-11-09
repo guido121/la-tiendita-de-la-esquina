@@ -16,9 +16,13 @@
 				case 'car':   //Carrito
 					$address='pags/carrito/carrito.php';
 				break;
+				//Sección ayuda
 				case 'help': //Ayuda
 					$address='pags/ayuda/seccionAyuda.php';
 				break;
+				
+				//Fin de ayuda
+				
 				case 'abrt': //Abarrotes
 					$address='pags/abarrotes/abarrotes.php';
 				break;
@@ -70,7 +74,7 @@
 				}
 		}
 		else{
-			$address='pags/defaultPag.php';
+			echo ('hola');//$address='pags/defaultPag.php';
 		}
 		include($address);
 //		else

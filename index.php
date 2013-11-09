@@ -13,6 +13,7 @@
       <script src="js/jquery-1.10.2.js" type="text/javascript"></script>
       <script src="js/bootstrap.js" type="text/javascript"></script>
       <script src="js/scriptBase.js" type="text/javascript"></script>
+	  <script src="js/scriptEfectos.js" type="text/javascript"></script>
    </header>
    <body>
       <div id="contenedor" class="">
@@ -23,7 +24,7 @@
          <div id="cuerpo">
             <!--Código Lucho */-->
             <?php
-               include("procesos/validarContenido.php");
+               include './../procesos/validarContenido.php';
                //include('pags/registroB.php');
                ?>
          </div>

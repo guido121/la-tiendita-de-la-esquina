@@ -183,64 +183,6 @@ text-align:center;
 display: inline;
 }
 
-#tab-menu
-{
-margin-top:3%;
-width:45%;
-margin-left: 3%;
-}
-
-#tab-lista
-{
-float:left;
-}
-#tab-lista ul
-{
-   list-style: none;
-   text-align: left;
-}
-#tab-lista ul li
-{
-   border-top: 1px solid #666;
-   border-right: 1px solid #666;
-   border-bottom: 1px solid #666;
-   border-left: 8px solid #666;
-   background-color: #ddd;
-   margin: 8px 0;
-   width:100px;
-}
-#tab-lista ul li a,
-#tab-lista ul li a:visited
-{
-   text-decoration: none;
-   color: #666;
-   display: block;
-   padding: 15px 5px;
-}
-#tab-lista ul li:hover
-{
-   border-left: 8px solid #333;
-}
-#tab-lista ul li a:hover
-{
-   color: #000;
-}
-#tab-lista ul li.selected
-{
-   border-right: none;
-   background-color: #fff;
-   border-left: 8px solid #006699;
-}
-#contenido-tab
-{
-   padding: 20px;
-   background-color: #fff;
-   border: 1px solid #888;
-   width:200px;
-   height:200px;
-   margin-left:148px;
-}
-
 #cuerpo
 {
 /* min-height:400px; 
@@ -485,67 +427,7 @@ margin: 13px;
 	width: 270px;
 	margin-bottom: 20px;
 }
-/*--Ayuda--*/
-#ayuda{
-margin:0px auto;
-width:700px;
-margin-bottom:25px;
-}
 
-#ayuda h2{
-	text-align:center;
-}
-#contenedor-botones-ayuda{
-width:440px;
-margin:15px auto;
-}
-#enla li{
-	margin:10px 1px;
-	padding:5px 5px;
-	
-	
-}
-#enla li a{
-	border-radius:6px;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	display: block;
-	padding:5px 6px;
-	text-decoration:none;
-	font-weight:bold;
-	color: #468847;
-background-color: #dff0d8;
-border-color: #d6e9c6;
-}
-#enla {
-	list-style: none;
-	padding:0px;
-	margin:0px;
-}
-
-#cAyuda{
-padding:25px 0px;
-}
-.bloqueAyuda{
-height:250px;
-margin-right:10px;
-float: left;
-padding:10px;
-
-}
-.preguntaRespuesta{
-min-width:205px;
-background-color: #dff0d8;
-	border-radius:8px;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-}
-
-#botones input{
-	float:left;
-	text-align:center;
-	padding:3px 4px;
-}
 /*----Productos----*/
 /*-Abarrotes-*/
 #listaAbarrotes{
