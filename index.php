@@ -22,8 +22,8 @@
          <div id="cuerpo">
             <!--Código Lucho */-->
             <?php
-               include('procesos/validarContenido.php');
-               //include('pags/registroB.php');
+				//include('procesos/validarContenido.php');
+               include('pags/registrarAcceder/actualizar.php');
                ?>
          </div>
        
