@@ -22,6 +22,7 @@
 		<div class="bloqueAyuda preguntaRespuesta">
 			<p>Usted debe...</p>
 		</div>	
+		
     </div>
 	<div class="clear"></div>
 	<div class="label-input" id="contenedor-botones-ayuda">
