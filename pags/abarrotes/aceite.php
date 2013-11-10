@@ -1,51 +1,29 @@
-<div id="primeraPagina">
+<?php
+	$consulta = "SELECT * FROM producto WHERE codigosubCategoria LIKE '1' OR codigosubCategoria LIKE '2'";
+	$personas = consulta_bd($consulta, $config);
+?>
+
+<div id="primeraPagina" class="scroll">
+
+
 	<div id="contenedor_imagenes">
+	
+		<?php foreach ($personas as $p) { ?>
+			
 		<div id="imagenes">
-			<div id="img">
-				<img src=".\img\Abarrotes\Aceite\Oliva\aceiteOliva_Borges250.png">
+			<div id="img" class="imagenMarco">
+				<img src="<?php echo $p['direccionImagen']; ?>">
+				<p> S/.<?php echo $p['precioUnitario']; ?> la unidad </p>	
 			</div>
+			
 			<div id="detalle img">
-				<form>
-					<label>Aceite de<br/> Oliva <br/> Borges</br> 250ml</label><br/>
-					<input type="Submit" value="+carrito" class="btn btn-info" id="boton_carrito"></input>
-				</form>
+				<p> <?php echo $p['nombreProducto']; ?></p>
+				<p> <?php echo $p['unidadesCaja']; ?> unidades x <?php echo $p['tamanioUnidad']; echo $p['unidadMedida'];?></p>	
+				<p> S/.<?php echo $p['precioCaja']; ?></p>
 			</div>
 		</div>
 		
-		<div id="imagenes">
-			<div id="img">
-				<img src=".\img\Abarrotes\Aceite\Oliva\aceiteOliva_Carbonell250.png">
-			</div>
-			<div id="detalle img">
-				<form>
-					<label>Aceite de<br/> Oliva <br/> Carbonell</br> 250ml</label><br/>
-					<input type="Submit" value="+carrito" class="btn btn-info" id="boton_carrito"></input>
-				</form>
-			</div>
-		</div>
+		<?php } ?>
 		
-		<div id="imagenes">
-			<div id="img">
-				<img src=".\img\Abarrotes\Aceite\Oliva\aceiteOliva_delPrado500.png">
-			</div>
-			<div id="detalle img">
-				<form>
-					<label>Aceite de<br/> Oliva <br/> del Prado</br> 500ml</label><br/>
-					<input type="Submit" value="+carrito" class="btn btn-info" id="boton_carrito"></input>
-				</form>
-			</div>
-		</div>
-		
-		<div id="imagenes">
-			<div id="img">
-				<img src=".\img\Abarrotes\Aceite\Oliva\aceiteOliva_ElOlivar500.png">
-			</div>
-			<div id="detalle img">
-				<form>
-					<label>Aceite de<br/> Oliva <br/> El Olivar</br> 500ml</label><br/>
-					<input type="Submit" value="+carrito" class="btn btn-info" id="boton_carrito"></input>
-				</form>
-			</div>
-		</div>
-	</div>
+	
 </div>		
