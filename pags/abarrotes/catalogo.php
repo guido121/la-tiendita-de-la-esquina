@@ -1,24 +1,18 @@
-<!doctype html>
-<html>
-	<head>
-		<title>Test Catalogo</title>
-		 <link href="estilo.css" type="text/css" rel="stylesheet"/>
-		 <link href="bootstrap.css" type="text/css" rel="stylesheet"/>
-		 <link href="bootstrap-responsive.css" type="text/css" rel="stylesheet"/>
-	</head>
-	<body>
+		<?php  include '.\procesos\funciones.php';
+		?>
+		
 		<div id="catalogo" class="container">
-			<div id="subcategorias" data-spy="scroll">
+		<h1>Sección Abarrotes</h1>
+			<div id="subcategorias">				
 				<?php
 				 include ('pags/abarrotes/subcategorias_abarrotes.php'); 
 				?> 				
 			</div>
 			<div id="paginasCatalogo">
+				<h2>Todos</h2>
 				<?php
-				 include ('pags/abarrotes/aceite.php'); 
+				 include ('pags/abarrotes/arroz_saman.php'); 
 				?>		
 			</div>
 			
 		</div>
-	</body>
-</html>

@@ -1,6 +1,8 @@
 <?php 
 
-
+	include '.\procesos\conexionBD.php';
+	include '.\procesos\config.php';
+	
 function consulta_bd($consulta,$config){
 		$conexion=mysql_connect($config['servidor'],
 		$config['usuario'],

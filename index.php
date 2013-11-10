@@ -13,11 +13,17 @@
       <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
       <script src="js/bootstrap.js" type="text/javascript"></script>
       <script src="js/scriptBase.js" type="text/javascript"></script>
+<<<<<<< HEAD
       <script src="js/bootbox.min.js" type="text/javascript"></script>
    </head>
+=======
+	  <script src="js/scriptEfectos.js" type="text/javascript"></script>
+   </header>
+>>>>>>> 375ac95f4ed869b32e2518e6d8390211cee7437c
    <body>
       <div id="contenedor" >
          <?php include("include/cabecera.php");?>
+<<<<<<< HEAD
             <div class="clearfix"></div>
             <?php include("include/barra_categorias_productos.php") ?>
             <div class="clearfix"></div>
@@ -33,6 +39,19 @@
             
             </div>
              
+=======
+         <div class="clearfix"></div>
+         <?php include("include/barra_categorias_productos.php") ?>
+         <div class="clearfix"></div>
+         <div id="cuerpo">
+            <!--Código Lucho */-->
+            <?php
+               include './../procesos/validarContenido.php';
+               //include('pags/registroB.php');
+               ?>
+         </div>
+       
+>>>>>>> 375ac95f4ed869b32e2518e6d8390211cee7437c
       </div>
       <div class="clearfix"></div>
       <?php include("include/pie_de_pagina.php") ?>

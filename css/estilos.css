@@ -188,64 +188,6 @@ text-align:center;
 display: inline;
 }
 
-#tab-menu
-{
-margin-top:3%;
-width:45%;
-margin-left: 3%;
-}
-
-#tab-lista
-{
-float:left;
-}
-#tab-lista ul
-{
-   list-style: none;
-   text-align: left;
-}
-#tab-lista ul li
-{
-   border-top: 1px solid #666;
-   border-right: 1px solid #666;
-   border-bottom: 1px solid #666;
-   border-left: 8px solid #666;
-   background-color: #ddd;
-   margin: 8px 0;
-   width:100px;
-}
-#tab-lista ul li a,
-#tab-lista ul li a:visited
-{
-   text-decoration: none;
-   color: #666;
-   display: block;
-   padding: 15px 5px;
-}
-#tab-lista ul li:hover
-{
-   border-left: 8px solid #333;
-}
-#tab-lista ul li a:hover
-{
-   color: #000;
-}
-#tab-lista ul li.selected
-{
-   border-right: none;
-   background-color: #fff;
-   border-left: 8px solid #006699;
-}
-#contenido-tab
-{
-   padding: 20px;
-   background-color: #fff;
-   border: 1px solid #888;
-   width:200px;
-   height:200px;
-   margin-left:148px;
-}
-
 #cuerpo
 {
 /* min-height:400px; 
@@ -508,71 +450,17 @@ margin: 13px;
 	margin-bottom:20px;
 	margin-left:35px;
 }
+
+.scroll {
+    width: 100%;
+	height: 300px;
+    overflow: scroll;
+}
 #cForm-labelConfirmMedia{
 	width: 270px;
 	margin-bottom: 20px;
 }
-/*--Ayuda--*/
-#ayuda{
-margin:0px auto;
-width:700px;
-margin-bottom:25px;
-}
 
-#ayuda h2{
-	text-align:center;
-}
-#contenedor-botones-ayuda{
-width:440px;
-margin:15px auto;
-}
-#enla li{
-	margin:10px 1px;
-	padding:5px 5px;
-	
-	
-}
-#enla li a{
-	border-radius:6px;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	display: block;
-	padding:5px 6px;
-	text-decoration:none;
-	font-weight:bold;
-	color: #468847;
-background-color: #dff0d8;
-border-color: #d6e9c6;
-}
-#enla {
-	list-style: none;
-	padding:0px;
-	margin:0px;
-}
-
-#cAyuda{
-padding:25px 0px;
-}
-.bloqueAyuda{
-height:250px;
-margin-right:10px;
-float: left;
-padding:10px;
-
-}
-.preguntaRespuesta{
-min-width:205px;
-background-color: #dff0d8;
-	border-radius:8px;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-}
-
-#botones input{
-	float:left;
-	text-align:center;
-	padding:3px 4px;
-}
 /*----Productos----*/
 /*-Abarrotes-*/
 #listaAbarrotes{
@@ -601,6 +489,10 @@ background-color: #dff0d8;
 	width:750px;
 	margin-right: 20px;
 	margin-top:40px;	
+}
+
+.imagenMarco{
+	border:1px solid black;
 }
 
 #mas_vendidos_abarrotes{
@@ -680,54 +572,40 @@ padding:2px 4px;
 
 /*Catalogo*/
 #subcategorias{
-	background-color: rgba(74, 153, 195, 0.9);
-	-webkit-border-radius: 0px 12px 12px 0px;
-       -moz-border-radius: 0px 12px 12px 0px;
-            border-radius: 0px 12px 12px 0px;
-	width:100px;
-	height:208px;
+	width:150px;
 	padding:8px;
-	margin-left:30px;
 	float:left;
 	margin-top:40px;	
-	box-shadow: -11px 10px 7px -7px black;
 }
 
 #subcategorias li{
-	background-color:#365f73;
-	border:1px solid black;
-	-webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
-	box-shadow: 0px 10px 7px -7px black;
-	margin-top:10px;
 	width:70px;
 	list-style:none;
-	padding-left:10px;
-	margin-left:-40px;
+	padding-top:10px;
+	margin-left:-10px;
+	border: 1px solid black;
+	padding-bottom:10px;
+	width: 168px;
+	
 }
 
 #subcategorias a{
 	text-decoration:none;
-	color:white;
+	padding-left:20px;
 }
 
 #paginasCatalogo{
-	width:600px;
-	height:288px;
-	padding:7px;
-	background-color:rgba(187, 192, 180, 0.4);
-	-webkit-border-radius: 0px 32px 32px 0px;
-       -moz-border-radius: 0px 32px 32px 0px;
-            border-radius: 0px 32px 32px 0px;
+	width:530px;
+	margin-top:47px;
+	border:1px solid black;
 	float:left;	
-	box-shadow: 10px 10px 7px -7px black;
-	margin-left:-50px;
+	margin-left:50px;
 }
 
 #catalogo{
 	margin-top:30px;
-	width:745px;
+	width:800px;
+	border:1px solid black;
 }
 
 #img img{
@@ -751,6 +629,5 @@ padding:2px 4px;
 }
 
 #contenedor_imagenes{
-	width:550px;
-	margin-left:40px;
+	width:550px;	
 }

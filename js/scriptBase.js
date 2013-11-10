@@ -53,11 +53,14 @@ $('document').ready(function(){
 	//cForm-regist-next-usuario
 	//cForm-regist-next-contacto
 	
+<<<<<<< HEAD
 	$('#myTab a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
 	});
 	/*--------------AUTENTICAR USUARIO----------------*/
+=======
+>>>>>>> 375ac95f4ed869b32e2518e6d8390211cee7437c
 	$('#btnIniciarSesion').click(function(e){
 		var array =new Object();
 		array['ruc']=$('#txtRUCAcceder').val();
