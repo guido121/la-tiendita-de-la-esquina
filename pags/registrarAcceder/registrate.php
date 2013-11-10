@@ -2,35 +2,54 @@
 <div id="registroB">
 	<h1 class="title-form" >Bienvenido al registro de usuario</h1>
 	<p>Por favor ingrese los datos indicados a continuación.</p>
-	<form action="procesos/registrarEmpresa.php" method="post">
+	<form action="" method="post">
 		<fieldset>
 			<legend>Datos de acceso</legend>
-			<p>La clave debe ser mayor a 6 caracteres y no ser su RUC</p>
 			<label>Ingrese una clave de acceso:</label>
-			<input type="password" name="contrasenia1"/><br/>
+			<div class="div-input-registro">
+				<input id="contrasenia1" class="alinearIzquierda inputRegistro" type="password" name="contrasenia1"/><div id="msgErrorPassword1" class="alinearIzquierda text-error mensajeErrorRegistro"></div>
+					<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
 			<label>Ingrese nuevamente la clave:</label>
-			<input type="password" name="contrasenia2"/>
+			<div class="div-input-registro">
+				<input id="contrasenia2" class="alinearIzquierda inputRegistro" type="password" name="contrasenia2"/>
+			</div>
+			<div class="clear"></div>
 		</fieldset>
 
 		
 		<fieldset>
 			<legend>Datos de Jurídicos</legend>
 			<label>Razón Social:</label>
-			<input type="text" name="razonSoc"/><br/>
+			<div class="div-input-registro">
+				<input id="registro-empresa-razonSocial" class="alinearIzquierda inputRegistro" type="text" name="razonSoc"/><div id="msgErrorRazonSocial"class="alinearIzquierda text-error mensajeErrorRegistro"></div>
+			</div>
+			<div class="clear"></div>
 			<label>Ruc :</label>
-			<input type="text" maxlength="11" name="ruc"/><br/>
+			<div class="div-input-registro">
+				<input id="registro-empresa-ruc" class="alinearIzquierda inputRegistro" type="text" maxlength="11" name="ruc"/><div id="msgErrorRuc" class="alinearIzquierda text-error mensajeErrorRegistro"></div> 
+			</div>
+			<div class="clear"></div>
 			<label>Dirección Fiscal:</label>
-			<input type="text" name="dirFiscal"/>
+			<div class="div-input-registro">
+				<input id="registro-empresa-direccionFiscal" class="alinearIzquierda inputRegistro" type="text" name="dirFiscal"/><div id="msgErrorDireccionFiscal" class="alinearIzquierda text-error mensajeErrorRegistro"></div>
+			</div>
+			<div class="clear"></div>
 		</fieldset>
-
-		<div class="clear"></div>
 		
 		<fieldset>
 			<legend>Datos de Contacto</legend>
 			<label>Correo electrónico:</label>
-			<input type="email" name="correo"/><br/>
+			<div class="div-input-registro">
+				<input id="registro-empresa-correo" class="alinearIzquierda inputRegistro" type="email" name="correo"/><div id="msgErrorCorreo" class="alinearIzquierda text-error mensajeErrorRegistro"></div>
+			</div>
+			<div class="clear"></div>
 			<label>Numero de teléfono</label>
-			<input type="text" name="telefono"/>
+			<div class="div-input-registro">
+				<input id="registro-empresa-telefono"  class="alinearIzquierda inputRegistro" maxlength="10" type="text" name="telefono"/><div id="msgErrorTelefono" class="alinearIzquierda text-error mensajeErrorRegistro"></div>
+			</div>
+			<div class="clear"></div>
 		</fieldset>
 
 		<div class="clear"></div>
@@ -47,14 +66,10 @@
 		<a href="">Política de Privacidad</a> de La Tiendita de la Esquina.</p>
 		
 		<div id="btns-registroB">
-			<input type="submit" value="Listo"/>
+			<input id="btnRegistrarEmpresa" type="submit" value="Registrarme"/>
+			<div id="confirmation" class="text-success"></div>
 		</div>
-		<div>
-		<?php if(isset($_SESSION["feedBackRegistro"])){		?>
-		<p><?php echo $_SESSION["feedBackRegistro"]?></p>
-		<?php 
-		unset($_SESSION["feedBackRegistro"]);
-		}?>
+		<div id="mensaje-error-registro">
 		</div>
 	</form>
 </div>

@@ -1,9 +1,9 @@
 <?php 
 $config = array();
-$config['servidor']='mysql9.000webhost.com';
-$config['base_datos']="a9768316_ltdle";
-$config['usuario']="a9768316_root";
-$config['password']="titan121";
+$config['servidor']='localhost';
+$config['base_datos']="marketdb";
+$config['usuario']="root";
+$config['password']="";
 /*
 000WEBHOSTING
 ---------------------

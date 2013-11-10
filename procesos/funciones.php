@@ -59,4 +59,23 @@ function  consulta_bd_sin_resultados($consulta,$config){
 		}
 		$resultado=mysql_query($consulta);
 	}
+
+	function yaExisteRucEmpresa($ruc,$config){
+		$sw=false;
+		$query="SELECT * FROM empresa WHERE ruc='$ruc'";
+		$empresa=consulta_bd_fetchByIndex($query,$config);
+		if(count($empresa)>0){
+			$sw=true;
+		}
+		return $sw;
+	}
+		function yaExisteCorreoEmpresa($correo,$config){
+		$sw=false;
+		$query="SELECT * FROM empresa WHERE correo='$correo'";
+		$empresa=consulta_bd_fetchByIndex($query,$config);
+		if(count($empresa)>0){
+			$sw=true;
+		}
+		return $sw;
+	}
 ?>

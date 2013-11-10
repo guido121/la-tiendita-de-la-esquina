@@ -2,24 +2,41 @@
 session_start();
 include "config.php";
 include "funciones.php";
-if(isset($_POST['rucLogin']) && isset($_POST['claveAcceso'])){
+	$msgErrorContrasenia='';
+if($_SERVER['REQUEST_METHOD']!='POST'){
+		$msgErrorContrasenia='Metodo de acceso no permitido.';
+}else{
+	if(isset($_POST['ruc']) && isset($_POST['contrasenia'])){
 
-	$ruc=$_POST["rucLogin"];
-	$password=$_POST["claveAcceso"];
-	$password=md5($password);
-	$companyWithOpenedSession=consulta_bd_fetchByIndex("SELECT * FROM empresa WHERE ruc='$ruc' AND contrasenia='$password'",$config);
-	if(count($companyWithOpenedSession)>0){
-		$element=$companyWithOpenedSession[0];
-			//$_SESSION["codigoEmpresa"]=
-			$_SESSION["objUsuarioEmpresa"]=$element;
-			$_SESSION["razonSocial"]=$element["razonSocial"];
-			$_SESSION["autenticado"]=true;
-		}else{
-		$_SESSION["autenticado"]=false;
-			header("Location: ../index.php?pag=acceder");
-			die;
+	$ruc=$_POST["ruc"];
+	$passwordInput=$_POST["contrasenia"];
+	//SE CONSULTA POR RUC PARA PODER OBTENER EL SALT PARA VALIDAR CONTRASEÑA
+	
+	$passwordResponse=consulta_bd_fetchByIndex("SELECT * FROM usuario usu, contrasenia cont WHERE usu.codigoUsuario = cont.codigoUsuario AND usu.nombreUsuario='$ruc' AND cont.flagContraseniaActual=1",$config);
+	if(count($passwordResponse)>0){
+		
+    	$element=$passwordResponse[0];
+    	//SE OBTIENE EL SALT Y SE ENCRIPTA
+   		$passwordOutput=crypt($passwordInput,$element["contrasenia"]);
+			if($element["contrasenia"]==$passwordOutput){
+				$codigoEmpresa=$element["codigoEmpresa"];
+				$registroEmpresa=consulta_bd_fetchByIndex("SELECT * FROM empresa WHERE codigoEmpresa=$codigoEmpresa",$config);
+				$_SESSION["objUsuarioEmpresa"]=$registroEmpresa[0];
+			}else{
+				 $msgErrorContrasenia="Los datos son incorrectos.";		
+			}
 			
+		}else{
+			$msgErrorContrasenia="El usuario no se encuentra registrado.";
 		}
+
+	}else{
+			$msgErrorContrasenia="Aseg&uacite;rese de haber especificado su RUC y contrasen&ntilde;a.";
+	}
 }
-	header("Location:../index.php");
+	//CREACION DEL RESPONSE DE ERRORES
+	$response=array(
+	"errorInicio" => $msgErrorContrasenia
+	);
+	echo json_encode($response);
 ?>

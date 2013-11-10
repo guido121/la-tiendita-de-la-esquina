@@ -5,26 +5,18 @@
 			
 		<div>	
 			<label>R.U.C </label>
-			<input id="txtRUCAcceder" maxlength="11" class="pull-left" type="text" name="rucLogin"/><div id="errorRUC" class="form-error-msg pull-left">(*)</div>
+			<input id="txtRUCAcceder" maxlength="11" class="pull-left inputRegistro" type="text" name="rucLogin"/><div id="errorRUC" class="form-error-msg pull-left">(*)</div>
 			<div class="clear"></div>
 			<label>Contraseña </label> 
-			<input id="txtContraseniaAcceder" class="pull-left" type="password" name="claveAcceso" /><div id="errorContrasenia" class="form-error-msg pull-left">(*)</div>
+			<input id="txtContraseniaAcceder" class="pull-left inputRegistro" type="password" name="claveAcceso" /><div id="errorContrasenia" class="form-error-msg pull-left">(*)</div>
 			<div class="clear"></div>
 		</div>
 		
 		<p>Si no tienes cuenta <a href="index.php?pag=registrate">Regístrate</a></p>
-		
 		<input id="btnIniciarSesion" class="btn btn-info" type="submit" value="Ingresar" />
-		<p id="msgVerifiqueCampos" class="errorFailedLoginMsg datos-no-validos-acceder">(*) Los datos no estan completos.</p>
-		
-		<?php if(isset($_SESSION["autenticado"])){ 
-			if($_SESSION["autenticado"]==false){	?>
-		<p class="datos-no-validos-acceder errorFailedLoginMsg">El usuario y/o la contrase&ntilde;a no es(son) v&aacute;lido(s).</p>
-			
-		<?php 
-		unset($_SESSION["autenticado"]);
-		} 
-		}?>
+		<p>Olvide mi contrase&ntilde;a. <a href="#">Recordar</a> </p>
+		<p id="msgVerifiqueCampos" class="errorFailedLoginMsg datos-no-validos-acceder"></p>
+		<div id="mensaje-error-inicioSesion" class="text-error"></div>	
 	</form>
 	</div>
 </div>

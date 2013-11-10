@@ -1,5 +1,5 @@
 <footer>
-   <div id="mapa-nav" class="breadcrumb">
+   <div id="mapa-nav">
       <div class="centradoFooter">
          <div class="mapa-nav-cont">
             <h1><a href="index.php">Home</a></h1>

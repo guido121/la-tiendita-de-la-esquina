@@ -1,5 +1,6 @@
 <div>
 	<h1>Limpieza</h1>
+	<!--
 	<div class="cProducto-catalogo">
 		<div class="item-producto-img">
 			<img  class="producto-catalogo " src="img/productos/aromatizanteSapolio.jpg"/>
@@ -119,5 +120,5 @@
 			<p>Precio:</p>
 			<p>Cantidad:</p>
 		</div>
-	</div>
+	</div>-->
 </div>
